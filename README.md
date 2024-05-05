@@ -1,4 +1,20 @@
 # ToDos-list-for-Dendrite-AI
+
+To run the project:-
+
+you will need to configure the keycloak admin console and create a user before you can log into the application start using it
+
+1. cd my-app
+'npm start'
+the project will start on localhost3000
+
+2. open a new terminal
+cd Backend
+run - 'python app.py'
+the server will start listening on the port 5000
+
+below are some snapshots of the project
+
 1. ![Authorization](interface/Capture4.PNG)
 authorization interface integrated using keycloak
 
