@@ -8,15 +8,9 @@ const TodoForm = ({ onSubmit, buttonText = 'Add' }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Prepare todo object with the form data
-    const newTodo = {
-      title,
-      description,
-      time
-    };
+    const newTodo = { title, description, time };
 
     try {
-      // Send a POST request to your server
       const response = await fetch('http://localhost:5000/api/add_todo', {
         method: 'POST',
         headers: {
@@ -29,12 +23,10 @@ const TodoForm = ({ onSubmit, buttonText = 'Add' }) => {
         throw new Error('Failed to add todo');
       }
 
-      // Reset form inputs after successful submission
       setTitle('');
       setDescription('');
       setTime('');
 
-      // Invoke the onSubmit callback passed from parent component
       onSubmit(newTodo);
     } catch (error) {
       console.error('Error adding todo:', error.message);
@@ -42,19 +34,29 @@ const TodoForm = ({ onSubmit, buttonText = 'Add' }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        maxWidth: '400px',
+        margin: '0 auto'
+      }}
+      onSubmit={handleSubmit}
+    >
       <input
         type="text"
         placeholder="Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
         required
+        style={{ marginBottom: '10px', padding: '8px', fontSize: '16px', borderRadius: '4px', border: '1px solid #ccc' }}
       />
       <textarea
         placeholder="Description"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
         required
+        style={{ marginBottom: '10px', padding: '8px', fontSize: '16px', borderRadius: '4px', border: '1px solid #ccc' }}
       ></textarea>
       <input
         type="text"
@@ -62,9 +64,22 @@ const TodoForm = ({ onSubmit, buttonText = 'Add' }) => {
         value={time}
         onChange={(e) => setTime(e.target.value)}
         required
+        style={{ marginBottom: '10px', padding: '8px', fontSize: '16px', borderRadius: '4px', border: '1px solid #ccc' }}
       />
-      {/* Image upload input (for Pro license) */}
-      <button type="submit">{buttonText}</button>
+      <button
+        type="submit"
+        style={{
+          padding: '10px 20px',
+          fontSize: '16px',
+          backgroundColor: '#007bff',
+          color: '#fff',
+          border: 'none',
+          borderRadius: '4px',
+          cursor: 'pointer'
+        }}
+      >
+        {buttonText}
+      </button>
     </form>
   );
 };

@@ -60,9 +60,22 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div style={{ textAlign: 'center', padding: '20px', marginBottom: '20px' }}>
       <h1>Todo App</h1>
-      <button onClick={handleLogout}>Logout</button>
+      <button
+        onClick={handleLogout}
+        style={{
+          backgroundColor: 'red',
+          color: 'white',
+          padding: '10px',
+          border: 'none',
+          borderRadius: '5px',
+          cursor: 'pointer',
+          marginBottom: '20px', // Add margin top for spacing
+        }}
+      >
+        Logout
+      </button>     
       <TodoForm onSubmit={addTodo} />
       <TodoList todos={todos} onDelete={deleteTodo} onEdit={editTodo} />
     </div>
