@@ -8,6 +8,10 @@ authorization interface integrated using keycloak
 
 keycloak configuration
 
+3. ![configuration](interface/Capture6.PNG)
+
+Keycloak authorisation successfull
+
 
 
 3. ![Interface](interface/Capture.PNG)
