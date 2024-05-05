@@ -68,3 +68,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+To start keycloak server
+1. go to bin folder, cmd->kc.bat
+2. development environment
+
+PCKE-Proof key for code exchange
+
+login credentials for test
+username-test
+password-245678@#Rohan
