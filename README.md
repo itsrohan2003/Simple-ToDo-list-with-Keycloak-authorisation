@@ -2,6 +2,11 @@
 
 To run the project:-
 
+First start the keycloak server.
+Go to Keycloak/bin Folder.
+Open CMD. Run 'kc.bat start-dev'
+server start running on localhost:8080
+
 you will need to configure the keycloak admin console and create a user before you can log into the application start using it
 
 1. cd my-app
